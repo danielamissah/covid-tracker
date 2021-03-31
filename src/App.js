@@ -4,7 +4,7 @@ import DarkModeSwitch from "./components/DarkModeSwitch/DarkModeSwitch";
 import styles from "./App.module.css";
 
 import { fetchData } from "./api";
-import coronaImage from "./images/image.png";
+import appLogo from "./images/image.svg";
 
 class App extends React.Component {
   state = {
@@ -27,7 +27,7 @@ class App extends React.Component {
     const { data, country } = this.state;
     return (
       <div className={styles.container}>
-        <img className={styles.image} src={coronaImage} alt="COVID-19" />
+        <img className={styles.image} src={appLogo} alt="COVID-19" />
         <DarkModeSwitch />
         <CountryPicker handleCountryChange={this.handleCountryChange} />
         <Cards data={data} />
